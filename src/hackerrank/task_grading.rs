@@ -10,11 +10,10 @@ pub fn staircase(n: i32) {
 #[cfg(test)]
 mod tests {
     use super::*;
-
     #[test]
     fn test_staircase_logic() {
-        // Тест викликає функцію, щоб не було warnings про unused code
+        // Виклик функції у тесті робить код "живим" для компілятора
         staircase(3);
-        assert!(true);
+        assert!(true); 
     }
 }

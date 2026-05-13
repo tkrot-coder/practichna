@@ -1,3 +1,5 @@
 mod hackerrank;
 
-fn main() {}
+fn main() {
+    // порожньо або ваш код
+}
