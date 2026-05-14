@@ -20,13 +20,13 @@ mod tests {
 
     #[test]
     fn test_kangaroo_meets() {
-        // Приклад 1: зустрічаються в точці 12 через 4 стрибки
+    
         assert_eq!(kangaroo(0, 3, 4, 2), "YES");
     }
 
     #[test]
     fn test_kangaroo_never_meets() {
-        // Приклад 2: перший ніколи не наздожене другого
+
         assert_eq!(kangaroo(0, 2, 5, 3), "NO");
     }
 

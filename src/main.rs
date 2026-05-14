@@ -1,22 +1,21 @@
 mod hackerrank;
 
 fn main() {
-    // --- Тестування задачі 1: Apple and Orange ---
-    println!("--- Apple and Orange ---");
     let s = 7;
     let t = 11;
-    let a = 5;
-    let b = 15;
+    let a_pos = 5;
+    let b_pos = 15;
     let apples = vec![-2, 2, 1];
     let oranges = vec![5, -6];
 
-    hackerrank::apple_and_orange::solution(s, t, a, b, &apples, &oranges);
+    println!("--- Apple and Orange ---");
+    hackerrank::apple_and_orange::solution(s, t, a_pos, b_pos, &apples, &oranges);
 
-    // --- Тестування задачі 2: Kangaroo (Number Line Jumps) ---
     println!("\n--- Kangaroo ---");
-    let result = hackerrank::kangaroo::kangaroo(0, 3, 4, 2);
-    println!("Чи зустрінуться кенгуру: {}", result);
+    println!("{}", hackerrank::kangaroo::kangaroo(0, 3, 4, 2));
 
-    println!("\n------------------------------------------");
-    println!("Усі модулі завантажено, програма завершена!");
+    println!("\n--- Between Two Sets ---");
+    let a_set = vec![2, 4];
+    let b_set = vec![16, 32, 96];
+    println!("{}", hackerrank::between_two_sets::get_total_x(&a_set, &b_set));
 }
