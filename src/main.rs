@@ -1,5 +1,6 @@
 mod hackerrank {
     pub mod breaking_records;
+    pub mod migratory_birds; 
 }
 
 fn main() {
