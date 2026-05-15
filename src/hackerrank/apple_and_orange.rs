@@ -1,8 +1,3 @@
-/// Функція для підрахунку яблук та апельсинів, що впали на будинок.
-/// s: початок будинку, t: кінець будинку
-/// a: розташування яблуні, b: розташування апельсинового дерева
-/// apples: відстані, на які впали яблука від дерева a
-/// oranges: відстані, на які впали апельсини від дерева b
 pub fn count_apples_and_oranges(
     s: i32,
     t: i32,
@@ -26,7 +21,6 @@ pub fn count_apples_and_oranges(
     (apple_count, orange_count)
 }
 
-/// Функція для виведення результату (як того вимагає HackerRank)
 pub fn solution(s: i32, t: i32, a: i32, b: i32, apples: &[i32], oranges: &[i32]) {
     let (apples_on_house, oranges_on_house) = count_apples_and_oranges(s, t, a, b, apples, oranges);
     println!("{}", apples_on_house);
@@ -39,10 +33,6 @@ mod tests {
 
     #[test]
     fn test_count_apples_and_oranges() {
-        // Тестові дані з прикладу на HackerRank
-        // s = 7, t = 11 (межі будинку)
-        // a = 5 (яблуня), b = 15 (апельсин)
-        // apples = [-2, 2, 1], oranges = [5, -6]
         let s = 7;
         let t = 11;
         let a = 5;
@@ -52,7 +42,6 @@ mod tests {
 
         let result = count_apples_and_oranges(s, t, a, b, &apples, &oranges);
         
-        // Очікуваний результат: 1 яблуко (5+2=7), 1 апельсин (15-6=9)
         assert_eq!(result, (1, 1));
     }
 

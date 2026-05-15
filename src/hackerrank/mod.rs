@@ -3,3 +3,4 @@ pub mod task_grading; // Назва має бути такою ж, як назв
 pub mod apple_and_orange;
 pub mod kangaroo;
 pub mod between_two_sets;
+pub mod breaking_records;

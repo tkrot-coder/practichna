@@ -1,4 +1,3 @@
-/// Функція для виведення "сходів" (staircase)
 pub fn staircase(n: i32) {
     for i in 1..=n {
         let spaces = " ".repeat((n - i) as usize);
@@ -13,7 +12,6 @@ mod tests {
 
     #[test]
     fn test_staircase_logic() {
-        // Тест викликає функцію, щоб не було warnings про unused code
         staircase(3);
         assert!(true);
     }
