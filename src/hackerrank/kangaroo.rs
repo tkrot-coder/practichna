@@ -1,8 +1,5 @@
 pub fn kangaroo(x1: i32, v1: i32, x2: i32, v2: i32) -> String {
-    if v1 <= v2 {
-        return "NO".to_string();
-    }
-
+    if v1 > v2 && (x2 - x1) % (v1 - v2) == 0 {
         "YES".to_string()
     } else {
         "NO".to_string()
@@ -14,19 +11,17 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_kangaroo_meets() {
-    
+    fn test_kangaroo_yes() {
         assert_eq!(kangaroo(0, 3, 4, 2), "YES");
     }
 
     #[test]
-    fn test_kangaroo_never_meets() {
-
+    fn test_kangaroo_no() {
         assert_eq!(kangaroo(0, 2, 5, 3), "NO");
     }
 
     #[test]
-    fn test_kangaroo_same_speed_different_start() {
-        assert_eq!(kangaroo(0, 2, 4, 2), "NO");
+    fn test_kangaroo_same_v() {
+        assert_eq!(kangaroo(0, 2, 5, 2), "NO");
     }
 }

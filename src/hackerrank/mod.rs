@@ -6,3 +6,4 @@ pub mod between_two_sets;
 pub mod breaking_records;
 pub mod migratory_birds;
 pub mod task_sock_merchant;
+pub mod task_diagonal_difference;
